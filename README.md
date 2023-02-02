@@ -1,4 +1,3 @@
-README - Nigel Omondi
 Hi there! I am Nigel Omondi, a multi-disciplinary professional with expertise in UI/UX design, Android development, data analysis, and software engineering.
 
 UI/UX Designer

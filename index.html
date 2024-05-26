@@ -6,18 +6,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+		<link rel="icon" href="images/MyLogo.png" type="image" />
 	</head>
 	<body class="is-preload">
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">About Me</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Contact</a></li>
+		<nav class="navbar navbar-expand-lg bg-dark fixed-top">
+			<div class="container d-flex justify-content-between align-items-center">
+				<a class="navbar-brand" href="/"><img src="images/NIGEL-LOGO.svg" alt="nigel's logo" /></a>
+				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+				  <span class="navbar-toggler-icon" style="width:50"></span>
+			  </button>           -->
+			  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+				<div class="offcanvas-header">
+				  <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+				  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+				  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#top">About Me</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#work">Work</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#portfolio">Portfolio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#contact">Contact</a>
+					</li>
+					
 				</ul>
-			</nav>
+				</div>
+			  </div>
+			</div>
+		</nav>
 
 		<!-- Home -->
 			<article id="top" class="wrapper style1">
@@ -134,28 +159,7 @@
 
 							</article>
 						</div>
-						<!-- <div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/images7.jpeg" alt="" /></a>
-								<h3><a href="https://github.com/NigelOmondi/Noshow-appointment">NoShow Appointment</a></h3>
-								<p> A time series analysis to determine whether or not patients actually show up for their next appointment.</p>
-							</article>
-						</div> -->
-						<!-- <div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/casino.jpg" alt="" /></a>
-								<h3><a href="https://github.com/NigelOmondi/diceRollerApp.github.io">DiceRoller App</a></h3>
-								<p>An app utilizing Kotlin's Button and Image composables plus kotlin math functions to create a dice roller 
-									for a game night with friends!</p>
-							</article>
-						</div> -->
-						<!-- <div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/AirBnBRussia.jpg" alt="" /></a>
-								<h3><a href="https://github.com/NigelOmondi/AirBnB_clone">AirBnB Clone</a></h3>
-								<p>My current school project involves creating a replica of the AirBnB software.The project has 4 phases from a console application, to Databases, front-end and back-end.</p>
-							</article>
-						</div> -->
+						
 					</div>
 					<footer>
 						<p>...stayed tuned for many more interesting projects coming up!</p>
@@ -239,6 +243,11 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+			<!-- Add chart.js reference if chart components are used in your application. -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js" integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<!-- Add chartjs-plugin-datalabels.min.js reference if chart components with data label feature is used in your application. -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	</body>
 </html>

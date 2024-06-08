@@ -55,7 +55,7 @@
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
-								<h1>Hi. I'm <strong>Nigel Omondi</strong>.</h1>
+								<h1>Hi. I'm <strong>Nigel Omondi</strong>.</h1> 
 							</header>
 							<p>I am a multitalented <b>Software Engineer</b> with a domain Knowledge in UI/UX Design, Software Development, AI and Data Analytics. 
 							I design and build cross platform Android and iOS Mobile Applications and FullStack Web Applications all while continuously advancing my skillset.
@@ -179,7 +179,7 @@
 					</header>
 					<div class="row">
 						<div class="col-12">
-					<!--		<form method="post" action="#">
+							<form method="post" action="https://script.google.com/macros/s/AKfycbzRbrbIzKxeQG-i79mmiECBAhJYVT_k3B3yWig0NgGS6r4ioykCkX7pGmkMcDnjEhPG/exec" id="contactForm" target="hidden_iframe" onsubmit="formSubmitted(event);">
 								<div class="row">
 									<div class="col-6 col-12-small">
 										<input type="text" name="name" id="name" placeholder="Name" />
@@ -187,20 +187,22 @@
 									<div class="col-6 col-12-small">
 										<input type="text" name="email" id="email" placeholder="Email" />
 									</div>
-									<div class="col-12">
+									<!-- <div class="col-12">
 										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
+									</div> -->
 									<div class="col-12">
 										<textarea name="message" id="message" placeholder="Message"></textarea>
 									</div>
 									<div class="col-12">
 										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
+											<li><input type="submit" id="submitBtn" value="Send Message" /></li>
 											<li><input type="reset" value="Clear Form" class="alt" /></li>
 										</ul>
 									</div>
 								</div>
-							</form> -->
+							</form>
+							<!-- Hidden iframe to handle form submission -->
+							<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="iframeLoaded()"></iframe>
 						</div>
 						<div class="col-12">
 							<hr />
@@ -214,7 +216,7 @@
 								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li> -->
 								<li><a href="https://github.com/NigelOmondi" class="icon brands fa-github"><span class="label" target="_blank">Github</span></a></li>
 								
-								<li><a href="mailto:nigelomondi.engineer@gmail.com" class="icon solid fa-envelope-open-text" target="_blank"><span class="label">Email</span></a></li>
+								<li><a href="mailto:nigelomondi62@gmail.com" class="icon solid fa-envelope-open-text" target="_blank"><span class="label">Email</span></a></li>
 								<!--
 								
 								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
@@ -250,6 +252,38 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js" integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 			<!-- Add chartjs-plugin-datalabels.min.js reference if chart components with data label feature is used in your application. -->
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+			<script>
+				var submitted = false;
+		 
+			function formSubmitted(event) {
+				submitted = true;
+			
+				// Change button to 'Sending' state
+				var submitBtn = document.getElementById('submitBtn');
+				submitBtn.disabled = true; // Disable the button to prevent multiple submissions
+				submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending';
+				
+			}
+		 
+		 function iframeLoaded() {
+			 if (submitted) {
+				 submitted = false; // Reset the flag
+		 
+				 // Alert the user
+				 alert('Your details have been successfully submitted.');
+		 
+				 // Reset the button to its original state
+				 var submitBtn = document.getElementById('submitBtn');
+				 submitBtn.disabled = false; // Re-enable the button
+				 submitBtn.innerHTML = 'Send Message';
+				
+		 
+				 // Redirect to the home page
+				 window.location.href = '/';
+			 }
+		 }
+			 </script
 
 	</body>
 </html>
